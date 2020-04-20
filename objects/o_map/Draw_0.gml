@@ -66,8 +66,11 @@ if LMB && y > o_map_scroll.y {
 			nm[@Dif.leng] = string(l div 60)+":"+string(l mod 60);
 			nm[@Dif.star] = string_copy(nm[Dif.star], 1, 4);
 			nm[@Dif.bpm]  = string_copy(nm[Dif.bpm], 1, 5);
-			if difThumbEnable
-				dif.loading = sprite_add("https://b.ppy.sh/thumb/"+_id+"l.jpg", 1,0,1,0,0);
+			if difThumbEnable {
+				var tumb = New_mf0 o_tumbload New_mf1;
+				tumb.loading = sprite_add("https://b.ppy.sh/thumb/"+_id+"l.jpg", 1,0,1,0,0);
+				tumb.objectId = dif;
+			}
 			dif.dif = nm;
 		}
 	}

@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "42639480-e227-90e4-7f7f-ffb60f714c84",
+            "Value": {
+                "id": "a5630fe7-d541-d47d-6a5d-1d56275be3fe",
+                "resourcePath": "objects\\o_tumbload\\o_tumbload.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "444c9e7c-2be8-473b-84c6-a68386986e6b",
             "Value": {
                 "id": "39b3ef67-e900-47ee-a2b4-31302f902637",

@@ -1,10 +1,8 @@
-
 title   = "";
 artist  = "";
 status  = "";
 creator = "";
 _id     = "";
-
 
 preview = -1;
 maps = [];
@@ -20,7 +18,4 @@ enum Dif {
 	_id,
 	name,
 }
-
-
 thumbnail = -1;
-loading = -1;

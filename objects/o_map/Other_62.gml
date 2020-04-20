@@ -10,5 +10,3 @@ if preview == HttpId {
 		}
 	}
 }
-
-

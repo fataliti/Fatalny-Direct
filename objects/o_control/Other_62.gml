@@ -1,7 +1,7 @@
 
 if HttpId == pageRequest {
 	if HttpStatus == 0 {
-		log_mf0 "o_control" log_mf1 "55" log_mf2 "list loaded" log_mf3;
+		log_mf0 "o_control" log_mf1 "52" log_mf2 "list loaded" log_mf3;
 		with o_map kill();
 	
 		var mapList = json_decode(HttpResult);
@@ -15,8 +15,12 @@ if HttpId == pageRequest {
 			map._id    = get[? "id"];
 			map.status = real(get[? "status"]);	
 			
-			if mapThumbEnable
-				map.loading = sprite_add("https://b.ppy.sh/thumb/"+get[? "id"]+"l.jpg", 1,0,1,0,0);
+			if mapThumbEnable {
+				var tumb = New_mf0 o_tumbload New_mf1;
+				tumb.objectId = map;
+				tumb.download = sprite_add("https://b.ppy.sh/thumb/"+get[? "id"]+"l.jpg", 1,0,1,0,0);
+			}
+				//map.loading = sprite_add("https://b.ppy.sh/thumb/"+get[? "id"]+"l.jpg", 1,0,1,0,0);
 			
 			var difs = get[? "beatmaps"];	
 			for (var b = 0; b<ds_list_size(difs); b++) {
@@ -39,6 +43,6 @@ if HttpId == pageRequest {
 		ds_map_destroy(mapList);
 	} else if HttpStatus < 0 {
 		scr_message("Ошибка загрузки", c_red);
-		log_mf0 "o_control" log_mf1 "93" log_mf2 "list load failed" log_mf3;
+		log_mf0 "o_control" log_mf1 "94" log_mf2 "list load failed" log_mf3;
 	}
 }
