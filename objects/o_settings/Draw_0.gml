@@ -1,4 +1,4 @@
-
+xx = lerp(see?200:0,xx,0.7);
 
 alpha(0.8);
 color(c_black);
@@ -28,11 +28,15 @@ draw_circle(lp + 155, y+53, 8, false);
 draw_text(lp, y+80, "Превью");
 draw_circle(lp + 155, y+88, 8, false);
 
+draw_text(lp, y+115, "Вызов на: "+string(keyName(keyCall)));
+draw_circle(lp + 155, y+123, 8, false);
+
+draw_text(lp, y+150, "Свернуть на: "+string(keyName(keyDown)));
+draw_circle(lp + 155, y+158, 8, false);
+
 color(c_black);
 draw_circle(lp + 155, y+18, 6, false);
-
 draw_circle(lp + 155, y+53, 6, false);
-
 draw_circle(lp + 155, y+88, 6, false);
 
 
@@ -43,14 +47,19 @@ if mapThumbEnable
 	draw_circle(lp + 155, y+53, 4, false);
 if difThumbEnable
 	draw_circle(lp + 155, y+88, 4, false);
+
+if setKey == SetKey.call 
+	draw_circle_color(lp + 155, y+123, 6, c_purple, c_purple, false);
 	
+if setKey == SetKey.down 
+	draw_circle_color(lp + 155, y+158, 6, c_purple, c_purple, false);
 	
 if LMB {
 	if mouseIn_mf0 x + xx mouseIn_mf1 y-60 mouseIn_mf2 x+25 + xx mouseIn_mf3 y+60 mouseIn_mf4
 		see = !see;
 	if m {
 		exePath = get_open_filename("Osu!.exe|*.exe","");
-		log_mf0 "o_settings" log_mf1 "63" log_mf2 exePath log_mf3;
+		log_mf0 "o_settings" log_mf1 "79" log_mf2 exePath log_mf3;
 	}
 	
 	if point_in_circle(mouse_x, mouse_y, lp + 155, y+18, 8)
@@ -59,6 +68,29 @@ if LMB {
 		mapThumbEnable = !mapThumbEnable;
 	if point_in_circle(mouse_x, mouse_y, lp + 155, y+88, 8)
 		difThumbEnable = !difThumbEnable;
+		
+	if point_in_circle(mouse_x, mouse_y, lp + 155, y+123, 8) {
+		setKey = setKey == SetKey.null ? SetKey.call : SetKey.null;
+	}
+	if point_in_circle(mouse_x, mouse_y, lp + 155, y+158, 8) {
+		setKey = setKey == SetKey.null ? SetKey.down : SetKey.null;
+	}
+	
+	if !point_in_circle(mouse_x, mouse_y, lp + 155, y+158, 8) && !point_in_circle(mouse_x, mouse_y, lp + 155, y+123, 8)
+		setKey = SetKey.null;
 }
 
-xx = lerp(see?200:0,xx,0.7);
+switch(setKey) {
+	case SetKey.call:
+		if keyboard_check(vk_anykey) {
+			keyCall = keyboard_lastkey;
+			setKey = SetKey.null;
+		}
+		break;
+	case SetKey.down:
+		if keyboard_check(vk_anykey) {
+			keyDown = keyboard_lastkey;
+			setKey = SetKey.null;
+		}
+		break;
+}

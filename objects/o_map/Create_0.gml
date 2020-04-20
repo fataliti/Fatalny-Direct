@@ -1,6 +1,6 @@
 title   = "";
 artist  = "";
-status  = "";
+status  = 0;
 creator = "";
 _id     = "";
 
