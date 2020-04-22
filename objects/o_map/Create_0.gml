@@ -1,10 +1,10 @@
 title   = "";
-artist  = "";
 status  = 0;
 creator = "";
 _id     = "";
-
+thumbnail = -1;
 preview = -1;
+
 maps = [];
 mapsIcons = [];
 enum Dif {
@@ -17,5 +17,7 @@ enum Dif {
 	bpm,
 	_id,
 	name,
+	sizeOf,
 }
-thumbnail = -1;
+
+colors = [$129815 , $FF8000, $0099FF, $E750D3, $A000B3, $1B1B1B];

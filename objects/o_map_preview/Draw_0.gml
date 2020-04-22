@@ -4,7 +4,7 @@ image_alpha = lerp(apr?1:0, image_alpha,0.65);
 
 alpha(image_alpha);
 
-color(c_black);
+color($181113);
 draw_rectangle(x, y, x+164, y+345, false);
 
 draw_set_color(c_green);

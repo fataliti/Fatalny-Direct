@@ -8,6 +8,8 @@
 #macro halign	draw_set_halign
 #macro LMB		mouse_check_button_pressed(mb_left)
 #macro RMB		mouse_check_button_pressed(mb_right)
+#macro mx		mouse_x
+#macro my		mouse_y
 
 #macro HttpId				async_load[? "id"]
 #macro HttpStatus			async_load[? "status"]

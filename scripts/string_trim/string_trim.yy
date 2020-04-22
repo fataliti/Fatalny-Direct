@@ -1,8 +1,8 @@
 {
-    "id": "591a3320-5c6e-e204-6317-f826d540a832",
+    "id": "14dbd5a5-fbb6-296a-e0bf-edbe8ca79246",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "__lf_o_textfield_step_linkAdd",
+    "name": "string_trim",
     "IsCompatibility": false,
     "IsDnD": false
 }

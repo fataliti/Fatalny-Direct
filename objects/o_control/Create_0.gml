@@ -6,6 +6,15 @@ FMODGMS_Sys_Initialize(32);
 fChan = FMODGMS_Chan_CreateChannel();
 fSnd = -1;
 
+if !file_exists("settings.ini") {
+	var f = file_text_open_write("settings.ini");
+	file_text_close(f);
+}
+
+globalvar dataPath;
+dataPath = filename_path("settings.ini");
+
+
 
 globalvar exePath, autoOpen, difThumbEnable, mapThumbEnable, keyCall, keyDown;
 ini_open("settings.ini");
@@ -18,3 +27,4 @@ keyDown = ini_read_real("sets", "keyDown", vk_escape);
 ini_close();
 
 pageRequest = -1;
+

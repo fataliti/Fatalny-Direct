@@ -53,7 +53,7 @@ switch (vCode) {
 	case vk_add: vOut = "( + )"; break;
 	case vk_subtract: vOut = "( - )"; break;
 	case vk_decimal: vOut = "( . )"; break;
-	case vk_tilde: vOut = "Tilde"; break; //vk_tilde = 192
+	case vk_tilde: vOut = "Tilde"; break; // vk_tilde = 192
 	default: vOut = chr(vCode); break;
 }
 

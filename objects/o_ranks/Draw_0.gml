@@ -10,7 +10,7 @@ alpha(0.5);
 if see || mouseIn_mf0 x mouseIn_mf1  bbox_top mouseIn_mf2  x+96 mouseIn_mf3  y+24 mouseIn_mf4
 	alpha(1);
 
-color(c_black);
+color($181113);
 draw_rectangle(x, y, x+96, y+24, false);
 alpha(1);
 color(c_white);
@@ -19,7 +19,7 @@ draw_text(x+5,y+4,"Status");
 
 if see {
 	var inc = 30;
-	color(c_black);
+	color($181113);
 	draw_rectangle(x, y+24, x+96, y+24+150, false);
 	for (var a = 0; a < array_length_1d(ranksName); a++) {
 		var c = ranks[a] == true ? c_yellow : c_white;

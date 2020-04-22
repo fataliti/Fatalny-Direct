@@ -4,8 +4,8 @@
     "mvc": "1.1",
     "name": "13f16548-40bf-504d-fc3c-3c28edc4565d",
     "children": [
-        "1683e5de-3b9a-1f49-3ba1-636b135d8032",
-        "591a3320-5c6e-e204-6317-f826d540a832"
+        "c9712811-7430-d01a-ed29-ad6c49899bbe",
+        "6be7c81b-83b0-b0f4-4fe8-65dc43af85a2"
     ],
     "filterType": "GMScript",
     "folderName": "#gmedit-lambda",

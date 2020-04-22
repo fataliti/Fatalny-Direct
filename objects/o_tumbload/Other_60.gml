@@ -8,7 +8,7 @@ if HttpId == download {
 		}
 		else 
 			sprite_delete(download);
-			
 	kill();
-	} 
+	} else if HttpStatus < 0 
+		kill();
 }

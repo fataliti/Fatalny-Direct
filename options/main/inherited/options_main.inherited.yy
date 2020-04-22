@@ -1,8 +1,8 @@
 1.0.0←ed6a955d-5826-4f98-a450-10b414266c27←ed6a955d-5826-4f98-a450-10b414266c27|{
-    "option_author": "YellowAfterlife",
+    "option_author": "",
     "option_gameguid": "{44AC5F60-8B7B-4779-9626-B3F4DEE4D7A1}",
     "option_game_speed": 60,
-    "option_lastchanged": "19 April 2020 13:45:19"
+    "option_lastchanged": "23 April 2020 0:00:39"
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
     "scaled": false,
     "targets": 461609314234257646

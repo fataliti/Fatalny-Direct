@@ -1,16 +1,16 @@
 
 if HttpId == pageRequest {
 	if HttpStatus == 0 {
-		log_mf0 "o_control" log_mf1 "56" log_mf2 "list loaded" log_mf3;
+		log_mf0 "o_control" log_mf1 "67" log_mf2 "list loaded" log_mf3;
 		with o_map kill();
-	
+		with o_scroll yy=0;
+		
 		var mapList = json_decode(HttpResult);
 		var maps = mapList[? ds_map_find_first(mapList)];
 		for (var i = 0; i < ds_list_size(maps); i++) {
 			var get = maps[| i];
-			var map = instance_create_depth(o_textfield.x, 100 + 75*i, 0, o_map);
-			map.artist = get[? "artist"];
-			map.title  = get[? "title"];
+			var map = instance_create_depth(o_textfield.x, 100 + 70*i, 0, o_map);
+			map.title  = string_trim(get[? "artist"] + " - " + get[? "title"], 700);
 			map.creator= get[? "creator"];
 			map._id    = get[? "id"];
 			map.status = real(get[? "status"]);	
@@ -35,13 +35,14 @@ if HttpId == pageRequest {
 				d[@Dif.name] = beatmap[? "name"];
 				d[@Dif.leng] = beatmap[? "length"];
 				map.maps[b] = d;
-				map.mapsIcons[b] = real(beatmap[? "mode"]);
+				
+				map.mapsIcons[b] = [real(beatmap[? "mode"]), clamp(floor(real(beatmap[? "star"])),0,5)];
 			}
 			//log([get[? "title"], get[? "artist"], get[? "creator"], get[? "id"], get[? "rankedAt"]]);
 		}
 		ds_map_destroy(mapList);
 	} else if HttpStatus < 0 {
 		scr_message("Ошибка загрузки", c_red);
-		log_mf0 "o_control" log_mf1 "97" log_mf2 "list load failed" log_mf3;
+		log_mf0 "o_control" log_mf1 "109" log_mf2 "list load failed" log_mf3;
 	}
 }
