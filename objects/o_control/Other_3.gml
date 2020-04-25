@@ -11,4 +11,7 @@ ini_write_real("sets", "difThumbEnable", real(difThumbEnable));
 ini_write_real("sets", "mapThumbEnable", real(mapThumbEnable));
 ini_write_real("sets", "keyCall", keyCall);
 ini_write_real("sets", "keyDown", keyDown);
+
+ini_write_real("sets", "ppAddictEnable", real(ppAddictEnable));
+ini_write_real("sets", "tillerinoEnable", real(tillerinoEnable));
 ini_close();

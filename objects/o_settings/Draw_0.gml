@@ -1,10 +1,9 @@
 xx = lerp(see?200:0,xx,0.7);
 
-//alpha(0.8);
 color($181113);
 draw_rectangle(x + xx,y-60,x+25 + xx,y+60,false);
 draw_rectangle(0,y-60,x + xx,room_height,false);
-//alpha(1);
+
 color(c_white);
 halign(fa_center);
 draw_text_transformed(x+5 + xx, y, "SETTINGS", 1, 1, 90);
@@ -19,29 +18,23 @@ draw_sprite_ext(s_osu_ico,0,xx-55, y-47,1,1,0, exePath != "" || m? c_fuchsia:c_w
 var p = exePath!=""? " ":" не ";
 draw_text(lp, y-25, "Путь" + p +"указан");
 
-draw_text(lp, y+10, "Автоораспаковка");
-draw_circle(lp + 155, y+18, 8, false);
+{/*!#lamdef __lf_o_settings_draw_option*/};
 
-draw_text(lp, y+45, "Тамбнейлы");
-draw_circle(lp + 155, y+53, 8, false);
-
-draw_text(lp, y+80, "Превью");
-draw_circle(lp + 155, y+88, 8, false);
-
-draw_text(lp, y+115, "Вызов на: "+string(keyName(keyCall)));
-draw_circle(lp + 155, y+123, 8, false);
-
-draw_text(lp, y+150, "Свернуть на: "+string(keyName(keyDown)));
-draw_circle(lp + 155, y+158, 8, false);
-
-draw_text(lp, y+185, "Хранилище");
-draw_circle(lp + 155, y+193, 8, false);
+__lf_o_settings_draw_option("Автоораспаковка", lp, y+10);
+__lf_o_settings_draw_option("Тамбнейлы", lp, y+45);
+__lf_o_settings_draw_option("Превью", lp, y+80);
+__lf_o_settings_draw_option("Вызов на: "+string(keyName(keyCall)), lp, y+115);
+__lf_o_settings_draw_option("Свернуть на: "+string(keyName(keyDown)), lp, y+150);
+__lf_o_settings_draw_option("Хранилище", lp, y+185);
+__lf_o_settings_draw_option("Tillerino", lp, y+220);
+__lf_o_settings_draw_option("PPaddict", lp, y+255);
 
 color(c_black);
 draw_circle(lp + 155, y+18, 6, false);
 draw_circle(lp + 155, y+53, 6, false);
 draw_circle(lp + 155, y+88, 6, false);
-
+draw_circle(lp + 155, y+228, 6, false);
+draw_circle(lp + 155, y+263, 6, false);
 
 color(c_white);
 if autoOpen
@@ -51,17 +44,31 @@ if mapThumbEnable
 if difThumbEnable
 	draw_circle(lp + 155, y+88, 4, false);
 
+if tillerinoEnable
+	draw_circle(lp + 155, y+228, 4, false);
+if ircName == "" || ircPass == "" 
+	draw_circle_color(lp + 155, y+228, 6, c_red, c_red, false);
+
+if ppAddictEnable
+	draw_circle(lp + 155, y+263, 4, false);
+if addictKey == ""	
+	draw_circle_color(lp + 155, y+263, 6, c_red, c_red, false);
+
+
 if setKey == SetKey.call 
 	draw_circle_color(lp + 155, y+123, 6, c_purple, c_purple, false);
 if setKey == SetKey.down 
 	draw_circle_color(lp + 155, y+158, 6, c_purple, c_purple, false);
 	
+
+
 if LMB {
 	if mouseIn_mf0 x + xx mouseIn_mf1 y-60 mouseIn_mf2 x+25 + xx mouseIn_mf3 y+60 mouseIn_mf4
 		see = !see;
+
 	if m {
 		exePath = get_open_filename("Osu!.exe|*.exe","");
-		log_mf0 "o_settings" log_mf1 "81" log_mf2 exePath log_mf3;
+		log_mf0 "o_settings" log_mf1 "91" log_mf2 exePath log_mf3;
 	}
 	
 	if point_in_circle(mx, my, lp + 155, y+18, 8)
@@ -70,20 +77,34 @@ if LMB {
 		mapThumbEnable = !mapThumbEnable;
 	if point_in_circle(mx, my, lp + 155, y+88, 8)
 		difThumbEnable = !difThumbEnable;
-		
-	if point_in_circle(mx, my, lp + 155, y+123, 8) {
+
+	if point_in_circle(mx, my, lp + 155, y+123, 8) 
 		setKey = setKey == SetKey.null ? SetKey.call : SetKey.null;
-	}
-	if point_in_circle(mx, my, lp + 155, y+158, 8) {
+	if point_in_circle(mx, my, lp + 155, y+158, 8) 
 		setKey = setKey == SetKey.null ? SetKey.down : SetKey.null;
-	}
-	
-	if point_in_circle(mx, my, lp + 155, y+193, 8) {
-		execute_shell("C:\\Windows//explorer.exe " + dataPath, true);
-	}
-	
 	if !point_in_circle(mx, my, lp + 155, y+158, 8) && !point_in_circle(mx, my, lp + 155, y+123, 8)
 		setKey = SetKey.null;
+	
+	if point_in_circle(mx, my, lp + 155, y+193, 8) 
+		execute_shell("C:\\Windows//explorer.exe " + dataPath, true);
+	
+	if point_in_circle(mx, my, lp + 155, y+228, 8) && ircName != "" && ircPass != "" {
+		tillerinoEnable = !tillerinoEnable;
+		
+		if tillerinoEnable {
+			instance_activate_object(o_tillerinobot);
+			with o_tillerinobot exec(ircConnect);
+		} else {
+			with o_tillerinobot {
+				if socket >= 0
+					network_destroy(socket);
+				socket = -1;
+			}
+			instance_deactivate_object(o_tillerinobot);
+		}
+	}
+	if point_in_circle(mx, my, lp + 155, y+263, 8) && addictKey != ""
+		ppAddictEnable = !ppAddictEnable;
 }
 
 switch(setKey) {

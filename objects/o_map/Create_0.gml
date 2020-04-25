@@ -17,6 +17,7 @@ enum Dif {
 	bpm,
 	_id,
 	name,
+	setId,
 	sizeOf,
 }
 

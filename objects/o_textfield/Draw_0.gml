@@ -39,4 +39,6 @@ if LMB{
 	}
 }
 
+if o_control.pageRequest >= 0
+	draw_sprite_ext(s_arrow_load, 0, bbox_right - 24, y + 16, 1, 1, get_timer() / 5000, c_white, 1);
 
