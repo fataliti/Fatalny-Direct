@@ -16,7 +16,7 @@
 1. Зайти на эту страницу https://osu.ppy.sh/p/irc
 2. Авторизоваться и получить `Server password `
 3. Открыть файл `keys.ini`, который находится в папке с `Fatalny Direct`
-4. Вставить между кавычками в `ircName` ваш никтейм из осу(если в никнейме есть пробелы замените их нижним подчеркиванием `my Name -> my_Name`, а еще прочитать вот [это](https://github.com/Tillerino/Tillerinobot/wiki/How-to-fix-%22confusing-name%22-error), и вставьте ваш `Server password ` (который вы получили) тоже между кавычками в поле `ircPass`
+4. Вставить между кавычками в `ircName` ваш никтейм из осу(если в никнейме есть пробелы замените их нижним подчеркиванием `my Name -> my_Name`, а еще прочитать вот [это](https://github.com/Tillerino/Tillerinobot/wiki/How-to-fix-%22confusing-name%22-error)), и вставьте ваш `Server password ` (который вы получили) тоже между кавычками в поле `ircPass`
 5. Сохраните файл, откройте `Fatalny Direct` и в настройках включите `Tillerino`. У вас появится новая кнопка на которую вы сможете нажимать и она будет вызывать для tillerino комманду `!recommend` и вы получите рекомендацию с возможными результатами
 
 ## ppaddict (сколько pp за карту)
