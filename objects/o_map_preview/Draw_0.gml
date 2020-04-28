@@ -7,6 +7,9 @@ alpha(image_alpha);
 color($181113);
 draw_rectangle(x, y, x+164, acc==-1?y+415:y+510, false);
 
+draw_set_color( mouseIn_mf0 x+10 mouseIn_mf1 y+245 mouseIn_mf2 x+154 mouseIn_mf3 y+270 mouseIn_mf4 ? $F9A800 : $C08000);
+draw_rectangle(x+10,y+245,x+154,y+270,false);
+
 draw_set_color( mouseIn_mf0 x+10 mouseIn_mf1 y+280 mouseIn_mf2 x+154 mouseIn_mf3 y+305 mouseIn_mf4 ? $00CA00 : c_green);
 draw_rectangle(x+10,y+280,x+154,y+305,false);
 
@@ -31,10 +34,11 @@ if scl > 1
 
 var xc = x+82;
 draw_text_transformed(xc, y+3, d[Dif.name], scl, 1, 0);
-draw_text(xc, y+75, "Lenght:"+d[Dif.leng]);
-draw_text(xc, y+100, "BPM:"+d[Dif.bpm]);
-draw_text(xc, y+125, "Stars:"+d[Dif.star]);
+draw_text(xc, y+61, "Lenght:"+d[Dif.leng]);
+draw_text(xc, y+82, "BPM:"+d[Dif.bpm]);
+draw_text(xc, y+100, "Stars:"+d[Dif.star]);
 
+draw_text(xc, y+250, "LISTEN");
 draw_text(xc, y+285, "PREVIEW");
 draw_text(xc, y+320, "OPEN");
 draw_text(xc, y+355, "DOWNLOAD");
@@ -52,26 +56,38 @@ if acc != -1 {
 }
 
 halign(fa_right);
-draw_text(x+144, y+25, "OD:"+d[Dif.od]);
-draw_text(x+144, y+50, "AR:"+d[Dif.ar]);
+draw_text(x+144, y+21, "OD:"+d[Dif.od]);
+draw_text(x+144, y+42, "AR:"+d[Dif.ar]);
 halign(fa_left);
-draw_text(x+20, y+25, "CS:"+d[Dif.cs]);
-draw_text(x+20, y+50, "HP:"+d[Dif.hp]);
+draw_text(x+20, y+21, "CS:"+d[Dif.cs]);
+draw_text(x+20, y+42, "HP:"+d[Dif.hp]);
 
 if thumbnail != -1
-	draw_sprite(thumbnail, 0, x+3, y+150);
+	draw_sprite(thumbnail, 0, x+3, y+118);
 
 alpha(1);
 
 if LMB {
-	if mouseIn_mf0 x+10 mouseIn_mf1 y+280 mouseIn_mf2 x+154 mouseIn_mf3 y+305 mouseIn_mf4 
+	if mouseIn_mf0 x+10 mouseIn_mf1 y+245 mouseIn_mf2 x+154 mouseIn_mf3 y+270 mouseIn_mf4 {
+		makeSoundPrev(d[Dif.setId]);
+		click_mf0;
+	}
+	if mouseIn_mf0 x+10 mouseIn_mf1 y+280 mouseIn_mf2 x+154 mouseIn_mf3 y+305 mouseIn_mf4 {
 		url_open("https://bloodcat.com/osu/preview.html#"+d[Dif._id]);
-	if mouseIn_mf0 x+10 mouseIn_mf1 y+315 mouseIn_mf2 x+154 mouseIn_mf3 y+340 mouseIn_mf4 
+		click_mf0;
+	}
+	if mouseIn_mf0 x+10 mouseIn_mf1 y+315 mouseIn_mf2 x+154 mouseIn_mf3 y+340 mouseIn_mf4  {
 		url_open("https://osu.ppy.sh/beatmapsets/"+d[Dif.setId]);
-	if mouseIn_mf0 x+10 mouseIn_mf1 y+350 mouseIn_mf2 x+154 mouseIn_mf3 y+375 mouseIn_mf4 
+		click_mf0;
+	}
+	if mouseIn_mf0 x+10 mouseIn_mf1 y+350 mouseIn_mf2 x+154 mouseIn_mf3 y+375 mouseIn_mf4 {
 		makeDownload(d[Dif.setId], title);
-	if mouseIn_mf0 x+10 mouseIn_mf1 y+385 mouseIn_mf2 x+154 mouseIn_mf3 y+410 mouseIn_mf4
+		click_mf0;
+	}
+	if mouseIn_mf0 x+10 mouseIn_mf1 y+385 mouseIn_mf2 x+154 mouseIn_mf3 y+410 mouseIn_mf4 {
 		apr = false;
+		click_mf0;
+	}
 }
 
 

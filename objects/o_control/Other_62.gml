@@ -1,7 +1,7 @@
 
 if HttpId == pageRequest {
 	if HttpStatus == 0 {
-		log_mf0 "o_control" log_mf1 "83" log_mf2 "list loaded" log_mf3;
+		log_mf0 "o_control" log_mf1 "132" log_mf2 "list loaded" log_mf3;
 		with o_map kill();
 		with o_scroll yy=0;
 		
@@ -37,7 +37,7 @@ if HttpId == pageRequest {
 				d[@Dif.setId] = map._id;
 				map.maps[b] = d;
 				
-				map.mapsIcons[b] = [real(beatmap[? "mode"]), clamp(floor(real(beatmap[? "star"])),0,5)];
+				map.mapsIcons[b] = [real(beatmap[? "mode"]), clamp(floor(real(beatmap[? "star"])),1,6)];
 			}
 			//log([get[? "title"], get[? "artist"], get[? "creator"], get[? "id"], get[? "rankedAt"]]);
 		}
@@ -45,7 +45,7 @@ if HttpId == pageRequest {
 		pageRequest = -1;
 	} else if HttpStatus < 0 {
 		scr_message("Ошибка загрузки", c_red);
-		log_mf0 "o_control" log_mf1 "127" log_mf2 "list load failed" log_mf3;
+		log_mf0 "o_control" log_mf1 "176" log_mf2 "list load failed" log_mf3;
 		pageRequest = -1;
 	}
 }

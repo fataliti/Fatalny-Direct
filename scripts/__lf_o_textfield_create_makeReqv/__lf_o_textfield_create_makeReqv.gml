@@ -20,4 +20,5 @@
 		log_mf0 "o_textfield" log_mf1 "37" log_mf2 link log_mf3;
 		pageRequest = http_get(link);
 	}
+	click_mf0;
 }

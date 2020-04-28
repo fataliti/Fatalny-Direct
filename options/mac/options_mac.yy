@@ -16,7 +16,7 @@
     "option_mac_display_name": "",
     "option_mac_enable_retina": false,
     "option_mac_enable_steam": false,
-    "option_mac_icon_png": "${base_options_dir}\\mac\\icons\\1024.png",
+    "option_mac_icon_png": "${options_dir}\\mac\\icons\\1024.png",
     "option_mac_interpolate_pixels": false,
     "option_mac_menu_dock": false,
     "option_mac_output_dir": "",

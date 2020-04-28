@@ -6,6 +6,7 @@ connecting = false;
 awaitRecommend = false;
 ircConnect = __lf_o_tillerinobot_create_ircConnect;
 
+
 request = -1;
 reqDif  = "";
 reqAcc  = [];

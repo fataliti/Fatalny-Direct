@@ -35,7 +35,7 @@
 #macro mouseIn_mf4 )
 
 //!#mfunc playSnd {"args":["snd"],"order":[0]}
-#macro playSnd_mf0  var s=audio_play_sound(
+#macro playSnd_mf0  audio_play_sound(
 #macro playSnd_mf1 ,0,false)
 
 #macro vk_tilde 192

@@ -21,4 +21,5 @@ enum Dif {
 	sizeOf,
 }
 
-colors = [$129815 , $FF8000, $0099FF, $E750D3, $A000B3, $1B1B1B];
+colors = [0, $00C100 , $FFAD5B, $33ADFF, $F19CE7, $FF00FF, $0D0D0D];
+

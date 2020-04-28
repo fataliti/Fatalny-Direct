@@ -1,3 +1,6 @@
+//!#mfunc click {"args":[],"order":[]}
+#macro click_mf0  audio_play_sound(choose(s_click1,s_click2,s_click3),0,false)
+
 display_reset(8, false);
 draw_set_font(fnt_arial12);
 
@@ -15,7 +18,7 @@ globalvar dataPath;
 dataPath = filename_path("settings.ini");
 
 globalvar exePath, autoOpen, difThumbEnable, mapThumbEnable, keyCall, keyDown;
-globalvar ppAddictEnable ,tillerinoEnable, ircName, ircPass, addictKey;
+globalvar ppAddictEnable ,tillerinoEnable, ircName, ircPass, addictKey, FPS;
 
 ini_open("settings.ini");
 exePath = ini_read_string("sets", "exePath", "");
@@ -27,7 +30,11 @@ keyDown = ini_read_real("sets", "keyDown", vk_escape);
 
 ppAddictEnable = bool(ini_read_real("sets", "ppAddictEnable", 0));
 tillerinoEnable = bool(ini_read_real("sets", "tillerinoEnable", 0));
+
+FPS = ini_read_real("sets", "FPS", 60);
 ini_close();
+
+game_set_speed(FPS, gamespeed_fps);
 
 ini_open("keys.ini");
 addictKey = ini_read_string("keys", "addictKey", "");
@@ -35,3 +42,4 @@ ircName = ini_read_string("keys", "ircName", "");
 ircPass = ini_read_string("keys", "ircPass", "");
 ini_close();
 pageRequest = -1;
+
