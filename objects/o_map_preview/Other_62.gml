@@ -2,9 +2,9 @@
 if ppReqv == HttpId {
 	if HttpStatus == 0 {
 		var res = HttpResult;
-		log_mf0 "o_map_preview" log_mf1 "30" log_mf2 res log_mf3;
-		
+		//log(res);
 		if res == "Invalid key" {
+			ppReqv = -1;
 			scr_message("PPaddict invalid key");
 			exit;
 		}
@@ -32,5 +32,8 @@ if ppReqv == HttpId {
 		}
 		acc = _acc;
 		ds_map_destroy(json);
+	} else if HttpStatus < 0 {
+		ppReqv = -1;
+		fail = true;
 	}
 }

@@ -29,9 +29,17 @@ if see {
 	for (var a = 0; a < array_length_1d(modsOn); a++) {
 		draw_sprite_ext(s_game_modes, a, x-94+72*a-(288 * (a div 4)), y+42 + 75 * (a div 4), 1, 1, 0, modsOn[a]?c_white:c_dkgray, 1);
 
-		if LMB 
-			if mouseIn_mf0  x-94+72*a-(288 * (a div 4)) mouseIn_mf1  y+42 + 75 * (a div 4) mouseIn_mf2  x-94+72*a-(288 * (a div 4))+68 mouseIn_mf3  y+42 + 75 * (a div 4)+66 mouseIn_mf4
+		if LMB {
+			if mouseIn_mf0  x-94+72*a-(288 * (a div 4)) mouseIn_mf1  y+42 + 75 * (a div 4) mouseIn_mf2  x-94+72*a-(288 * (a div 4))+68 mouseIn_mf3  y+42 + 75 * (a div 4)+66 mouseIn_mf4 {
 				modsOn[a] = !modsOn[a];
+				with o_map_preview {
+					if acc != -1 && ppReqv >= 0 {
+						callAddict(self, dif[Dif._id]);
+						fail = false;
+					}
+				}
+			}
+		}
 	}
 }
 

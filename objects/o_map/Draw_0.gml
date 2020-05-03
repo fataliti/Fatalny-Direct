@@ -39,11 +39,11 @@ if LMB && y > o_map_scroll.y {
 		if see 
 			exit;
 
-	if mouseIn_mf0 x+800-32 mouseIn_mf1  y mouseIn_mf2  x+800 mouseIn_mf3  y+32 mouseIn_mf4 {
+	if mouseIn_mf0 x+800-32 mouseIn_mf1  y mouseIn_mf2  x+800 mouseIn_mf3  y+28 mouseIn_mf4 {
 		makeDownload(_id, title);
 		click_mf0;
 	}
-	if mouseIn_mf0 x+760-32 mouseIn_mf1  y mouseIn_mf2  x+760 mouseIn_mf3  y+32 mouseIn_mf4 {
+	if mouseIn_mf0 x+760-32 mouseIn_mf1  y mouseIn_mf2  x+760 mouseIn_mf3  y+28 mouseIn_mf4 {
 		makeSoundPrev(_id);
 		click_mf0;
 	}
@@ -54,18 +54,8 @@ if LMB && y > o_map_scroll.y {
 			click_mf0;
 			
 			g = mapsIcons[m];
-			if ppAddictEnable && g[0] == 0 {
-				with o_map_preview {
-					var mVal = 0;
-					for (var i = 0; i < array_length_1d(o_mod.modsOn); i++)
-						if o_mod.modsOn[i]
-							mVal += o_mod.modsVals[i];
-							
-					var link = "https://api.tillerino.org/beatmapinfo?k=" + addictKey + "&beatmapid=" + dif[Dif._id] + "&mods="+string(mVal);
-					log_mf0 "o_map" log_mf1 "98" log_mf2 link log_mf3;
-					ppReqv = http_get(link);
-				}
-			}		
+			if ppAddictEnable && g[0] == 0 
+				callAddict(o_map_preview, o_map_preview.dif[Dif._id]);
 		}
 	}
 }

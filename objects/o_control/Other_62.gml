@@ -1,7 +1,7 @@
 
 if HttpId == pageRequest {
 	if HttpStatus == 0 {
-		log_mf0 "o_control" log_mf1 "132" log_mf2 "list loaded" log_mf3;
+		log_mf0 "o_control" log_mf1 "136" log_mf2 "list loaded" log_mf3;
 		with o_map kill();
 		with o_scroll yy=0;
 		
@@ -45,7 +45,7 @@ if HttpId == pageRequest {
 		pageRequest = -1;
 	} else if HttpStatus < 0 {
 		scr_message("Ошибка загрузки", c_red);
-		log_mf0 "o_control" log_mf1 "176" log_mf2 "list load failed" log_mf3;
+		log_mf0 "o_control" log_mf1 "180" log_mf2 "list load failed" log_mf3;
 		pageRequest = -1;
 	}
 }

@@ -4,7 +4,8 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-        
+        "default",
+        "default;recompl"
     ],
     "option_ecma": false,
     "parentProject": {
@@ -44,6 +45,14 @@
                 "id": "c884b7ff-5057-4448-ae27-e1dba91cb8cc",
                 "resourcePath": "views\\043fccfd-177e-48ea-a73d-b3f8c58fd65d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "0db5dbf3-94bc-d838-69d1-131bb7830a46",
+            "Value": {
+                "id": "61069712-d812-7369-eaf5-04707af1e889",
+                "resourcePath": "scripts\\callAddict\\callAddict.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -289,6 +298,9 @@
         {
             "Key": "68fc8189-7edb-4ad9-b64d-dddbedbfb92b",
             "Value": {
+                "configDeltas": [
+                    "recompl"
+                ],
                 "id": "d4896a52-a3a5-449d-bedf-bb687cbafbd4",
                 "resourcePath": "extensions\\ExecuteShell\\ExecuteShell.yy",
                 "resourceType": "GMExtension"
@@ -361,6 +373,9 @@
         {
             "Key": "85267c21-83f4-4935-b116-0ca3965e15c3",
             "Value": {
+                "configDeltas": [
+                    "recompl"
+                ],
                 "id": "9f28b9d7-6b36-45dd-b7e6-573e7ebb3eaa",
                 "resourcePath": "extensions\\window_command_hook\\window_command_hook.yy",
                 "resourceType": "GMExtension"
@@ -625,6 +640,9 @@
         {
             "Key": "de29fd25-1f4c-4bf8-ab4d-c503232f23f0",
             "Value": {
+                "configDeltas": [
+                    "recompl"
+                ],
                 "id": "48e1a12d-2713-4b90-87aa-d719e7739b4c",
                 "resourcePath": "extensions\\FMODGMS\\FMODGMS.yy",
                 "resourceType": "GMExtension"
@@ -740,7 +758,8 @@
         "02e88e28-42f2-6dab-61ef-a00b7bd0eaf4",
         "803290de-2233-0a6c-82cf-d302bffea333",
         "6465fcb4-1a53-bd0c-b1a8-c5e0a857b0d5",
-        "4966d1fd-3f34-aad5-e2bc-e0e5385525fa"
+        "4966d1fd-3f34-aad5-e2bc-e0e5385525fa",
+        "0db5dbf3-94bc-d838-69d1-131bb7830a46"
     ],
     "tutorial": ""
 }

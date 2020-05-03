@@ -6,5 +6,10 @@ var yy = instance_exists(o_download)?instance_nearest(o_type.x,5000,o_download).
 if yy < 460
 	yy = 460;
 var down = instance_create_depth(o_type.x, yy, 0, o_download);
-down._id = http_get_file("https://bloodcat.com/osu/s/"+mapId, mapId+" "+mapTitle+".osz");
+
+var filename = mapId+" "+mapTitle+".osz";
+var symbols = ["?", "|", "/", "\\", ">", "<", ":", "*", "\""];
+for (var a = 0; a < array_length_1d(symbols); a++)
+	filename = string_replace_all(filename, symbols[a], " ");
+down._id = http_get_file("https://bloodcat.com/osu/s/"+mapId, filename);
 down.title = string_trim(title, 134);

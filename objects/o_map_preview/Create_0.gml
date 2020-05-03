@@ -16,3 +16,4 @@ enum Acc {
 }
 acc = -1;
 ppReqv = -1;
+fail = false;

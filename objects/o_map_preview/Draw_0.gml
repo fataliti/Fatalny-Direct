@@ -5,7 +5,7 @@ image_alpha = lerp(apr?1:0, image_alpha,0.65);
 alpha(image_alpha);
 
 color($181113);
-draw_rectangle(x, y, x+164, acc==-1?y+415:y+510, false);
+draw_rectangle(x, y, x+164, ppReqv!=-1 || dif != -1 ? y+510:y+415, false);
 
 draw_set_color( mouseIn_mf0 x+10 mouseIn_mf1 y+245 mouseIn_mf2 x+154 mouseIn_mf3 y+270 mouseIn_mf4 ? $F9A800 : $C08000);
 draw_rectangle(x+10,y+245,x+154,y+270,false);
@@ -43,6 +43,19 @@ draw_text(xc, y+285, "PREVIEW");
 draw_text(xc, y+320, "OPEN");
 draw_text(xc, y+355, "DOWNLOAD");
 draw_text(xc, y+390, "CLOSE");
+
+if ppReqv != -1 && acc == -1
+	draw_sprite_ext(s_arrow_load, 0, xc, y+430, 1, 1, get_timer() / 5000, c_white, 1);
+
+if fail {
+	draw_text(xc, y+415, "API ERROR");
+	var c = mouseIn_mf0 x mouseIn_mf1  y+425 mouseIn_mf2  x+164 mouseIn_mf3  y+445 mouseIn_mf4? c_yellow:c_white;
+	draw_text_color(xc, y+434, "retry", c, c, c, c, 1);
+	if LMB && c == c_yellow {
+		callAddict(self, d[Dif._id]);
+		fail = false;
+	}
+}
 
 if acc != -1 {
 	scl = 155 / string_width(acc[Acc.acc93]);
