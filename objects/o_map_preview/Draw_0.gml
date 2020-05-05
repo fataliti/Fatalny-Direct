@@ -5,7 +5,7 @@ image_alpha = lerp(apr?1:0, image_alpha,0.65);
 alpha(image_alpha);
 
 color($181113);
-draw_rectangle(x, y, x+164, ppReqv!=-1 || dif != -1 ? y+510:y+415, false);
+draw_rectangle(x, y, x+164, ppReqv!=-1 || acc != -1 ? y+510:y+415, false);
 
 draw_set_color( mouseIn_mf0 x+10 mouseIn_mf1 y+245 mouseIn_mf2 x+154 mouseIn_mf3 y+270 mouseIn_mf4 ? $F9A800 : $C08000);
 draw_rectangle(x+10,y+245,x+154,y+270,false);

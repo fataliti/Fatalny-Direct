@@ -2,7 +2,7 @@
 var type = async_load[? "type"];
 
 if type == network_type_non_blocking_connect {
-	log_mf0 "o_tillerinobot" log_mf1 "94" log_mf2 "conect" log_mf3;
+	log_mf0 "o_tillerinobot" log_mf1 "96" log_mf2 "conect" log_mf3;
 	alarm[1] = room_speed * 10;
 	sendpack("PASS " + ircPass+ "\r\nNICK " + ircName+"\r\nUSER " + ircName+" 0 * :"+ircName+"\r\nCHAT #Tillerino");
 }  else if type == network_type_data {
@@ -40,11 +40,11 @@ if type == network_type_non_blocking_connect {
 		if string_count("PRIVMSG", g) {
 
 			if !string_count("Tillerino", g) {
-				log_mf0 "o_tillerinobot" log_mf1 "132" log_mf2 g log_mf3;
+				log_mf0 "o_tillerinobot" log_mf1 "134" log_mf2 g log_mf3;
 				exit;
 			}
 			g = string_delete(g, 1, string_pos(":", g));
-			log_mf0 "o_tillerinobot" log_mf1 "136" log_mf2 g log_mf3;
+			log_mf0 "o_tillerinobot" log_mf1 "138" log_mf2 g log_mf3;
 			
 			if string_count("!reset",g) {
 				scr_message("NO RECCOMENDS", c_green);
