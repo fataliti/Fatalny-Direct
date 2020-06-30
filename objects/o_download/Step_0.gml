@@ -1,8 +1,9 @@
 
 image_alpha = lerp(apr?1:0, image_alpha, 0.85);
 
-if !apr && image_alpha <= 0.01
+if !apr && image_alpha <= 0.01 {
 	kill();
+}
 
 if !place_meeting(x, y-1, o_solid) {
 	spd -= 0.3;
@@ -15,3 +16,4 @@ if place_meeting(x, y+spd, o_solid) {
 	spd = 0;
 }
 y += spd;
+

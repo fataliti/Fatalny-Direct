@@ -1,3 +1,4 @@
+
 if HttpId == _id {
 	size = HttpContentLength;
 	downloaded = HttpSizeDownloaded;
@@ -8,7 +9,7 @@ if HttpId == _id {
 		} else 
 			path = exePath+" "+HttpResult;
 		//log( exePath+" " + HttpResult);
-		log_mf0 "o_download" log_mf1 "47" log_mf2 "downloaded: "+ HttpResult log_mf3;
+		log_mf0 "o_download" log_mf1 "52" log_mf2 "downloaded: "+ HttpResult log_mf3;
 		size = 1;
 		downloaded = 1;
 	}

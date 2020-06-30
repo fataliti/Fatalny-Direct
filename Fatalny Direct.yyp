@@ -323,6 +323,14 @@
             }
         },
         {
+            "Key": "746362ce-f241-49e8-99cc-abd084399684",
+            "Value": {
+                "id": "af8a99d0-6ac9-4a39-8399-588470914060",
+                "resourcePath": "extensions\\cs_dll\\cs_dll.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "761c21b3-b99b-4cb1-aa0b-d5472ddd546c",
             "Value": {
                 "id": "bea98225-e9d5-40ad-b399-9f6d9164c500",
