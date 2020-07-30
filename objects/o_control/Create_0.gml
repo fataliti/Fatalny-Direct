@@ -1,7 +1,7 @@
 //!#mfunc click {"args":[],"order":[]}
 #macro click_mf0  audio_play_sound(choose(s_click1,s_click2,s_click3),0,false)
 
-display_reset(8, false);
+
 draw_set_font(fnt_arial12);
 
 FMODGMS_Sys_Create();
@@ -24,10 +24,14 @@ globalvar ppAddictEnable ,tillerinoEnable, ircName, ircPass, addictKey, FPS;
 ini_open("settings.ini");
 exePath = ini_read_string("sets", "exePath", "");
 autoOpen = bool(ini_read_real("sets", "autoOpen", 1));
-difThumbEnable = bool(ini_read_real("sets", "difThumbEnable", 1));
 mapThumbEnable = bool(ini_read_real("sets", "mapThumbEnable", 0));
+//difThumbEnable = bool(ini_read_real("sets", "difThumbEnable", 1));
 keyCall = ini_read_real("sets", "keyCall", vk_tilde);
 keyDown = ini_read_real("sets", "keyDown", vk_escape);
+
+globalvar AAlevel;
+AAlevel = ini_read_real("sets", "AAlevel", 0);
+display_reset(AAlevel, false);
 
 ppAddictEnable = bool(ini_read_real("sets", "ppAddictEnable", 0));
 tillerinoEnable = bool(ini_read_real("sets", "tillerinoEnable", 0));

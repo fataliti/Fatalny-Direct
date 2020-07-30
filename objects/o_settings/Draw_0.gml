@@ -22,7 +22,8 @@ draw_text(lp, y-25, "Path" + p +"specified");
 
 __lf_o_settings_draw_option("Auto Unpack", lp, y+10);
 __lf_o_settings_draw_option("Tumbnails", lp, y+45);
-__lf_o_settings_draw_option("Preview", lp, y+80);
+//option("Preview", lp, y+80);
+__lf_o_settings_draw_option("AA level x"+string(AAlevel), lp, y+80);
 __lf_o_settings_draw_option("Maximize on: "+string(keyName(keyCall)), lp, y+115);
 __lf_o_settings_draw_option("Minimize on: "+string(keyName(keyDown)), lp, y+150);
 __lf_o_settings_draw_option("Storage", lp, y+185);
@@ -43,8 +44,10 @@ if autoOpen
 	draw_circle(lp + 155, y+18, 4, false);
 if mapThumbEnable
 	draw_circle(lp + 155, y+53, 4, false);
-if difThumbEnable
-	draw_circle(lp + 155, y+88, 4, false);
+// if difThumbEnable
+// 	draw_circle(lp + 155, y+88, 4, false);
+
+draw_circle(lp + 155, y+88, (AAlevel / 8) * 4, false);
 
 if tillerinoEnable
 	draw_circle(lp + 155, y+228, 4, false);
@@ -70,16 +73,24 @@ if LMB {
 
 	if m {
 		exePath = get_open_filename("Osu!.exe|*.exe","");
-		log_mf0 "o_settings" log_mf1 "93" log_mf2 exePath log_mf3;
+		log_mf0 "o_settings" log_mf1 "96" log_mf2 exePath log_mf3;
 	}
 	
 	if point_in_circle(mx, my, lp + 155, y+18, 8)
 		autoOpen = !autoOpen;
 	if point_in_circle(mx, my, lp + 155, y+53, 8)
 		mapThumbEnable = !mapThumbEnable;
-	if point_in_circle(mx, my, lp + 155, y+88, 8)
-		difThumbEnable = !difThumbEnable;
-
+	// if point_in_circle(mx, my, lp + 155, y+88, 8)
+	// 	difThumbEnable = !difThumbEnable;
+	
+	if point_in_circle(mx, my, lp + 155, y+88, 8) {
+		AAlevel += 2;
+		if AAlevel > 8 
+			AAlevel = 0;
+			
+		display_reset(AAlevel, false);
+	}
+	
 	if point_in_circle(mx, my, lp + 155, y+123, 8) 
 		setKey = setKey == SetKey.null ? SetKey.call : SetKey.null;
 	if point_in_circle(mx, my, lp + 155, y+158, 8) 

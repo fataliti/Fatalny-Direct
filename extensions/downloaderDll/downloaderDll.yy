@@ -2,7 +2,7 @@
     "id": "746362ce-f241-49e8-99cc-abd084399684",
     "modelName": "GMExtension",
     "mvc": "1.2",
-    "name": "cs_dll",
+    "name": "downloaderDll",
     "IncludedResources": [
         
     ],

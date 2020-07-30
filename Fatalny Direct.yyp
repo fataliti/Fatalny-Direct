@@ -326,7 +326,7 @@
             "Key": "746362ce-f241-49e8-99cc-abd084399684",
             "Value": {
                 "id": "af8a99d0-6ac9-4a39-8399-588470914060",
-                "resourcePath": "extensions\\cs_dll\\cs_dll.yy",
+                "resourcePath": "extensions\\downloaderDll\\downloaderDll.yy",
                 "resourceType": "GMExtension"
             }
         },

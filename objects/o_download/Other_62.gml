@@ -9,13 +9,13 @@ if HttpId == _id {
 		} else 
 			path = exePath+" "+HttpResult;
 		//log( exePath+" " + HttpResult);
-		log_mf0 "o_download" log_mf1 "52" log_mf2 "downloaded: "+ HttpResult log_mf3;
+		log_mf0 "o_download" log_mf1 "58" log_mf2 "downloaded: "+ HttpResult log_mf3;
 		size = 1;
 		downloaded = 1;
 	}
 	
 	if HttpStatus < 0 {
-		scr_message("Ошибка загрузки",c_red);
+		scr_message("Download error",c_red);
 		kill();
 	}
 }

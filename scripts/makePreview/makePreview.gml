@@ -13,7 +13,7 @@ var l = round(real(nm[Dif.leng]));
 nm[Dif.leng] = string(l div 60)+":"+string(l mod 60);
 nm[Dif.star] = string_copy(nm[Dif.star], 1, 4);
 nm[Dif.bpm]  = string_copy(nm[Dif.bpm], 1, 5);
-if difThumbEnable {
+if mapThumbEnable {
 	var tumb = New_mf0 o_tumbload New_mf1;
 	tumb.download = sprite_add("https://b.ppy.sh/thumb/"+nm[Dif.setId]+"l.jpg", 1,0,1,0,0);
 	tumb.objectId = dif;
