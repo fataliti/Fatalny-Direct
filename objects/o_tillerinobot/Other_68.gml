@@ -2,7 +2,7 @@
 var type = async_load[? "type"];
 
 if type == network_type_non_blocking_connect {
-	log_mf0 "o_tillerinobot" log_mf1 "96" log_mf2 "conect" log_mf3;
+	log_mf0 "o_tillerinobot" log_mf1 "76" log_mf2 "conect" log_mf3;
 	alarm[1] = room_speed * 10;
 	sendpack("PASS " + ircPass+ "\r\nNICK " + ircName+"\r\nUSER " + ircName+" 0 * :"+ircName+"\r\nCHAT #Tillerino");
 }  else if type == network_type_data {
@@ -40,11 +40,11 @@ if type == network_type_non_blocking_connect {
 		if string_count("PRIVMSG", g) {
 
 			if !string_count("Tillerino", g) {
-				log_mf0 "o_tillerinobot" log_mf1 "134" log_mf2 g log_mf3;
+				log_mf0 "o_tillerinobot" log_mf1 "114" log_mf2 g log_mf3;
 				exit;
 			}
 			g = string_delete(g, 1, string_pos(":", g));
-			log_mf0 "o_tillerinobot" log_mf1 "138" log_mf2 g log_mf3;
+			log_mf0 "o_tillerinobot" log_mf1 "118" log_mf2 g log_mf3;
 			
 			if string_count("!reset",g) {
 				scr_message("NO RECCOMENDS", c_green);
@@ -64,8 +64,12 @@ if type == network_type_non_blocking_connect {
 			var map = string_copy(g, 2, p1-1);
 			reqDif = string_copy(map, string_pos("[",map), string_pos("]",map));
 			var mapId = string_digits(string_copy(map, 1, string_pos(" ",map)));
-			request = http_get("https://bloodcat.com/osu/?mod=json&q="+mapId+"&c=b");
-
+			//request = http_get("https://bloodcat.com/osu/?mod=json&q="+mapId+"&c=b");
+			
+			var reqString = "https://api.chimu.moe/cheesegull/b/"+string(mapId);
+			show_debug_message(reqString);
+			request = http_get(reqString);
+			
 			var p2;
 			for(var i = 1; i < string_length(g); i++)
 				if string_char_at(g, i) == "|"

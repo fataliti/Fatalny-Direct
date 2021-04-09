@@ -18,7 +18,7 @@ if place_meeting(x, y+spd, o_solid) {
 y += spd;
 
 
-trace(downloadComplete(_id));
+//trace(downloadComplete(_id));
 if downloadComplete(_id) == -1 {
 	scr_message("Download error",c_red);
 	kill();

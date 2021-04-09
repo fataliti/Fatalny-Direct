@@ -18,6 +18,7 @@ enum Dif {
 	_id,
 	name,
 	setId,
+	hasVideo,
 	sizeOf,
 }
 

@@ -1,6 +1,6 @@
 //!#mfunc click {"args":[],"order":[]}
 #macro click_mf0  audio_play_sound(choose(s_click1,s_click2,s_click3),0,false)
-
+#macro selectedColor /*#*/0xFF359A
 
 draw_set_font(fnt_arial12);
 
@@ -43,6 +43,9 @@ game_set_speed(FPS, gamespeed_fps);
 
 ini_open("keys.ini");
 addictKey = ini_read_string("keys", "addictKey", "");
+if addictKey == "" {
+	addictKey = ppAddictKey;
+}
 ircName = ini_read_string("keys", "ircName", "");
 ircPass = ini_read_string("keys", "ircPass", "");
 ini_close();

@@ -25,9 +25,9 @@ if textfield_active {
 }
 
 
-draw_sprite_ext(s_arrow, 0, x + 755, y + 48, 1, 1, 0, mouseIn_mf0 x+755 mouseIn_mf1 y+48 mouseIn_mf2 x+755+15 mouseIn_mf3 y+46+14 mouseIn_mf4?c_yellow:c_white, 1);
-draw_sprite_ext(s_arrow, 0, x + 705, y + 48, -1, 1, 0, mouseIn_mf0 x+705-15 mouseIn_mf1 y+48 mouseIn_mf2 x+705 mouseIn_mf3 y+46+14 mouseIn_mf4?c_yellow:c_white, 1);
-draw_sprite_ext(s_search, 0, bbox_right - 22, y + 8, 1, 1, 0, mouseIn_mf0 bbox_right - 22 mouseIn_mf1  y + 8 mouseIn_mf2  bbox_right - 22+16 mouseIn_mf3  y + 8+16 mouseIn_mf4?c_yellow:c_white, 1);
+draw_sprite_ext(s_arrow, 0, x + 755, y + 48, 1, 1, 0, mouseIn_mf0 x+755 mouseIn_mf1 y+48 mouseIn_mf2 x+755+15 mouseIn_mf3 y+46+14 mouseIn_mf4?selectedColor:c_white, 1);
+draw_sprite_ext(s_arrow, 0, x + 705, y + 48, -1, 1, 0, mouseIn_mf0 x+705-15 mouseIn_mf1 y+48 mouseIn_mf2 x+705 mouseIn_mf3 y+46+14 mouseIn_mf4?selectedColor:c_white, 1);
+draw_sprite_ext(s_search, 0, bbox_right - 22, y + 8, 1, 1, 0, mouseIn_mf0 bbox_right - 22 mouseIn_mf1  y + 8 mouseIn_mf2  bbox_right - 22+16 mouseIn_mf3  y + 8+16 mouseIn_mf4?selectedColor:c_white, 1);
 
 if o_control.pageRequest >= 0
 	draw_sprite_ext(s_arrow_load, 0, bbox_right - 37, y + 16, 1, 1, get_timer() / 5000, c_white, 1);

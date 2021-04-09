@@ -1,8 +1,12 @@
 {
-    "id": "02e88e28-42f2-6dab-61ef-a00b7bd0eaf4",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "sendpack",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "sendpack",
+  "tags": [],
+  "resourceType": "GMScript",
 }

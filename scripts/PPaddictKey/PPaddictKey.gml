@@ -1,0 +1,2 @@
+globalvar ppAddictKey;
+ppAddictKey = "";
