@@ -1,3 +1,5 @@
+#macro API_URL "https://catboy.best/api/search?"
+
 /// __lf_o_textfield_create_makeReqv()
 function __lf_o_textfield_create_makeReqv() {
 	//!#lambda makeReqv
@@ -16,7 +18,8 @@ function __lf_o_textfield_create_makeReqv() {
 		with (o_control) {
 			var link = ""; 
 			if o_type.type == 2 {
-				link = "https://api.chimu.moe/v1/search?";
+				// link = "https://api.chimu.moe/v1/search?";
+				link = API_URL;
 				link += "query="+other.textfield_string;
 				link += "&amount=50";
 				link += "&offset="+string((other.page-1)*50);
@@ -54,7 +57,7 @@ function __lf_o_textfield_create_makeReqv() {
 				link += parametAdd("status", o_ranks);
 				link += parametAdd("mode", o_modes);
 			}
-			log_mf0 "__lf_o_textfield_create_makeReqv" log_mf1 "57" log_mf2 link log_mf3;
+			log_mf0 "__lf_o_textfield_create_makeReqv" log_mf1 "60" log_mf2 link log_mf3;
 			pageRequest = http_get(link);
 			
 		}

@@ -1,6 +1,6 @@
 //!#mfunc click {"args":[],"order":[]}
 #macro click_mf0  audio_play_sound(choose(s_click1,s_click2,s_click3),0,false)
-#macro selectedColor /*#*/0xFF359A
+#macro selectedColor #9A35FF
 
 draw_set_font(fnt_arial12);
 
