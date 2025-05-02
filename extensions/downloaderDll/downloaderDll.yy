@@ -18,7 +18,7 @@
   "exportToGame": true,
   "extensionVersion": "0.0.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"Downloader.dll","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"GmsDownloaderDll.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadFile","argCount":0,"args":[
             1,
             1,
@@ -32,20 +32,13 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadResult","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"DownloadResult","help":"downloadResult(downloadId)","hidden":false,"kind":1,"returnType":1,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadComplete","argCount":0,"args":[
-            2,
-          ],"documentation":"","externalName":"DownloadComplete","help":"downloadComplete(downloadId)","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadDirectory","argCount":0,"args":[
             1,
           ],"documentation":"","externalName":"DownloadDirectory","help":"downloadDirectory(path)","hidden":false,"kind":1,"returnType":1,},
-      ],"init":"","kind":1,"order":[
-        {"name":"downloadFile","path":"extensions/downloaderDll/downloaderDll.yy",},
-        {"name":"downloadStatus","path":"extensions/downloaderDll/downloaderDll.yy",},
-        {"name":"downloadDelete","path":"extensions/downloaderDll/downloaderDll.yy",},
-        {"name":"downloadResult","path":"extensions/downloaderDll/downloaderDll.yy",},
-        {"name":"downloadComplete","path":"extensions/downloaderDll/downloaderDll.yy",},
-        {"name":"downloadDirectory","path":"extensions/downloaderDll/downloaderDll.yy",},
-      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadComplete","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"DownloadComplete","help":"downloadComplete(downloadId)","hidden":false,"kind":1,"returnType":2,},
+      ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",
   "hasConvertedCodeInjection": true,

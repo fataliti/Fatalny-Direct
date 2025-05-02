@@ -16,7 +16,8 @@ if !file_exists("settings.ini") {
 
 globalvar dataPath;
 dataPath = filename_path("settings.ini");
-log_mf0 "o_control" log_mf1 "23" log_mf2 downloadDirectory(dataPath) log_mf3;
+log_mf0 "o_control" log_mf1 "23" log_mf2 "download directory is" log_mf3;
+log_mf0 "o_control" log_mf1 "24" log_mf2 downloadDirectory(dataPath) log_mf3;
 
 globalvar exePath, autoOpen, difThumbEnable, mapThumbEnable, keyCall, keyDown;
 globalvar ppAddictEnable ,tillerinoEnable, ircName, ircPass, addictKey, FPS;

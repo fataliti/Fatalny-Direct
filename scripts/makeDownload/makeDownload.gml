@@ -14,6 +14,9 @@ function makeDownload(argument0, argument1) {
 		filename = string_replace_all(filename, symbols[a], " ");
 							
 	//down._id = downloadFile("https://bloodcat.com/osu/s/"+string(mapId), filename); 
-	down._id = downloadFile("https://api.chimu.moe/v1/download/"+string(mapId)+"?n=0", filename); 
+	// down._id = downloadFile("https://api.chimu.moe/v1/download/"+string(mapId)+"?n=0", filename); 
+	var download_url = $"https://catboy.best/d/{mapId}";
+	trace($"download file url: {download_url}");
+	down._id = downloadFile(download_url, filename); 
 	down.title = string_trim(title, 134);
 }
