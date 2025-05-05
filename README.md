@@ -1,5 +1,7 @@
 # Fatalny-Direct
 
+**[ENGLISH VERSION OF THE TEXT](https://fataliti.itch.io/fatalny-direct)**
+
 Сторонний стендалон Osu! Direct, то есть его аналог, который подсасывается к [chimu.moe](https://chimu.moe/)
 
 Что умеет?
