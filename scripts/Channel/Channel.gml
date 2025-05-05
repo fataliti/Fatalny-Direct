@@ -35,7 +35,7 @@ function Channel() constructor {
 		return __volume;
 	}
 	
-	static kill = function() {
+	static destroy = function() {
 		return ChannelKill(__id);
 	}
 	
