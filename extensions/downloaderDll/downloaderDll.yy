@@ -20,9 +20,10 @@
   "files": [
     {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"GmsDownloaderDll.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadFile","argCount":0,"args":[
+            2,
             1,
             1,
-          ],"documentation":"","externalName":"DownloadFile","help":"downloadFile(link, filenaName) ","hidden":false,"kind":1,"returnType":2,},
+          ],"documentation":"","externalName":"DownloadFile","help":"downloadFile(downloadId, link, filenaName) ","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadStatus","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"DownloadStatus","help":"downloadStatus(downloadId)","hidden":false,"kind":1,"returnType":2,},
@@ -43,6 +44,7 @@
             1,
             1,
           ],"documentation":"","externalName":"DownloadAddHeader","help":"downloadAddHeader(downloadId, name, value)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadCreate","argCount":0,"args":[],"documentation":"","externalName":"DownloadCreate","help":"downloadCreate()","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",

@@ -17,6 +17,11 @@ function makeDownload(argument0, argument1) {
 	// down._id = downloadFile("https://api.chimu.moe/v1/download/"+string(mapId)+"?n=0", filename); 
 	var download_url = $"https://catboy.best/d/{mapId}";
 	trace($"download file url: {download_url}");
-	down._id = downloadFile(download_url, filename); 
+	
+	var downloadId = downloadCreate();
+	down._id = downloadId; 
+	downloadAddHeader(downloadId, "User-Agent", "Mozilla/5.0");
+	downloadAddHeader(downloadId, "Accept", "/");
+	downloadFile(downloadId, download_url, filename); 
 	down.title = string_trim(title, 134);
 }
