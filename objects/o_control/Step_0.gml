@@ -1,6 +1,7 @@
 if (keyboard_check_pressed(keyDown)) {
 	if (PREVIEW_CHANNEL.getPosition() < PREVIEW_CHANNEL.getDuration()) {
-		PREVIEW_CHANNEL.stop();
+		//PREVIEW_CHANNEL.stop();
+		PREVIEW_CHANNEL.reset();
 	} else {
 		window_command_run(window_command_minimize);
 	}

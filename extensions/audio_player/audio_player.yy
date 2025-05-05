@@ -52,6 +52,9 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"ChannelPause","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"ChannelPause","help":"ChannelPause(chanId)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"ChannelReset","argCount":0,"args":[
+            2,
+          ],"documentation":"","externalName":"ChannelReset","help":"ChannelReset(chanId)","hidden":false,"kind":1,"returnType":2,},
       ],"init":"PlayerInit","kind":1,"order":[
         {"name":"PlayerInit","path":"extensions/audio_player/audio_player.yy",},
         {"name":"ChannelCreate","path":"extensions/audio_player/audio_player.yy",},

@@ -39,6 +39,10 @@ function Channel() constructor {
 		return ChannelKill(__id);
 	}
 	
+	static reset = function() {
+		return ChannelReset(__id);
+	}
+	
 	static getDuration = function() {
 		return ChannelDuration(__id);	
 	}
