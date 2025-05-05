@@ -1,44 +1,22 @@
-#define window_command_init
-//#window_command_close = $F060:
-//#window_command_maximize = $F030:
-//#window_command_minimize = $F020:
-//#window_command_restore = $F120:
-//#window_command_resize = $F000:
-//#window_command_move = $F010:
+#define window_command_hook_init
+//#init window_command_hook_init
+//#macro window_command_close    $F060
+//#macro window_command_maximize $F030
+//#macro window_command_minimize $F020
+//#macro window_command_restore  $F120
+//#macro window_command_resize   $F000
+//#macro window_command_move     $F010
 
-#define window_command_hook
-/// @description  (index): Hooks the specified command 
-/// @param index
-return window_command_hook_raw(window_handle(), argument0);
-
-#define window_command_unhook
-/// @description  (index):
-/// @param index
-return window_command_unhook_raw(window_handle(), argument0);
-
-#define window_command_run
-/// @description  (index, param = 0):
-/// @param index
-/// @param  param = 0
-var wp = argument[0], lp;
-if (argument_count > 1) {
-	lp = argument[1];
-} else lp = 0;
-return window_command_run_raw(window_handle(), wp, lp);
-
-#define window_command_get_active
-/// @description  (command): Returns whether the given command is currently available.
-/// @param command
-return window_command_get_active_raw(window_handle(), argument0);
-
-#define window_command_set_active
-/// @description  (command, status:bool): Enables/disables the command. Returns -1 if not possible.
-/// @param command
-/// @param  status:bool
-return window_command_set_active_raw(window_handle(), argument0, argument1);
-
-#define window_set_topmost
-/// @description  (stayontop:bool): Allows to set a window to show on top of the rest like with GM8.
-/// @param stayontop:bool
-return window_set_topmost_raw(window_handle(), argument0);
-
+#define window_command_hook_prepare_buffer
+/// (size:int)->buffer~
+var _size = argument0;
+gml_pragma("global", "global.__window_command_hook_buffer = undefined");
+var _buf = global.__window_command_hook_buffer;
+if (_buf == undefined) {
+    _buf = buffer_create(_size, buffer_grow, 1);
+    global.__window_command_hook_buffer = _buf;
+} else if (buffer_get_size(_buf) < _size) {
+    buffer_resize(_buf, _size);
+}
+buffer_seek(_buf, buffer_seek_start, 0);
+return _buf;
