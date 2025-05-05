@@ -21,11 +21,10 @@ draw_text(x+10, y+41, _id);
 
 halign(fa_left);
 
-var c,g;
-for (var m = 0; m < array_length(mapsIcons); m++) {
-	g = mapsIcons[m];
-	c = mouseIn_mf0 x+795-33*m-30 mouseIn_mf1  y+29 mouseIn_mf2  x+795-33*m mouseIn_mf3  y+29+30 mouseIn_mf4 ? selectedColor : colors[g[1]];
-	draw_sprite_ext( s_modess, g[0], x+795-33*m, y+29, 1, 1, 0, c, 1);
+var c;
+for (var m = 0; m < array_length(maps); m++) {
+	c = mouseIn_mf0 x+795-33*m-30 mouseIn_mf1  y+29 mouseIn_mf2  x+795-33*m mouseIn_mf3  y+29+30 mouseIn_mf4 ? selectedColor : colors[maps[m][Dif.dif_rating]];
+	draw_sprite_ext( s_modess, maps[m][Dif.mode], x+795-33*m, y+29, 1, 1, 0, c, 1);
 }
 
 
@@ -56,13 +55,12 @@ if LMB && y > o_map_scroll.y {
 		click_mf0;
 	}
 	
-	for (var m = 0; m < array_length_1d(mapsIcons); m++) {
+	for (var m = 0; m < array_length(maps); m++) {
 		if mouseIn_mf0 x+795-33*m-30 mouseIn_mf1  y+29 mouseIn_mf2  x+795-33*m mouseIn_mf3  y+29+30 mouseIn_mf4 {
 			makePreview(maps[m], title);
 			click_mf0;
 			
-			g = mapsIcons[m];
-			if ppAddictEnable && g[0] == 0 
+			if ppAddictEnable && maps[m][Dif.mode] == 0 
 				callAddict(o_map_preview, o_map_preview.dif[Dif._id]);
 		}
 	}

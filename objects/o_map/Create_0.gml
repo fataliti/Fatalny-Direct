@@ -6,7 +6,6 @@ thumbnail = -1;
 preview = -1;
 
 maps = [];
-mapsIcons = [];
 enum Dif {
 	cs,
 	ar,
@@ -19,6 +18,8 @@ enum Dif {
 	name,
 	setId,
 	hasVideo,
+	mode,
+	dif_rating,
 	sizeOf,
 }
 
