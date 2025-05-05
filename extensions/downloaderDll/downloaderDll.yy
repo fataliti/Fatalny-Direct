@@ -38,6 +38,11 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadComplete","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"DownloadComplete","help":"downloadComplete(downloadId)","hidden":false,"kind":1,"returnType":2,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadAddHeader","argCount":0,"args":[
+            2,
+            1,
+            1,
+          ],"documentation":"","externalName":"DownloadAddHeader","help":"downloadAddHeader(downloadId, name, value)","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",
