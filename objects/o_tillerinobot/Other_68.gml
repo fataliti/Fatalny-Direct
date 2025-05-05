@@ -65,8 +65,9 @@ if type == network_type_non_blocking_connect {
 			reqDif = string_copy(map, string_pos("[",map), string_pos("]",map));
 			var mapId = string_digits(string_copy(map, 1, string_pos(" ",map)));
 			//request = http_get("https://bloodcat.com/osu/?mod=json&q="+mapId+"&c=b");
+			// var reqString = "https://api.chimu.moe/cheesegull/b/"+string(mapId);
 			
-			var reqString = "https://api.chimu.moe/cheesegull/b/"+string(mapId);
+			var reqString = "https://catboy.best/api/b/" +string(mapId);
 			show_debug_message(reqString);
 			request = http_get(reqString);
 			

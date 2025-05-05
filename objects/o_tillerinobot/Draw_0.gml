@@ -12,7 +12,7 @@ draw_text(x+5,y+4,"Recomend");
 
 if LMB && mouseIn_mf0 x mouseIn_mf1  y mouseIn_mf2  x+96 mouseIn_mf3  y+24 mouseIn_mf4 {
 	if socket >= 0 && !fail && !awaitRecommend && !connecting {
-		log_mf0 "o_tillerinobot" log_mf1 "180" log_mf2 "reqv recomend" log_mf3;
+		log_mf0 "o_tillerinobot" log_mf1 "181" log_mf2 "reqv recomend" log_mf3;
 		var msg = "PRIVMSG Tillerino :!r";
 		for (var i = 0; i < array_length_1d(o_mod.modsOn); i++) {
 			if o_mod.modsOn[i] {
@@ -22,7 +22,7 @@ if LMB && mouseIn_mf0 x mouseIn_mf1  y mouseIn_mf2  x+96 mouseIn_mf3  y+24 mouse
 				}
 			}
 		}
-		log_mf0 "o_tillerinobot" log_mf1 "190" log_mf2 msg log_mf3;
+		log_mf0 "o_tillerinobot" log_mf1 "191" log_mf2 msg log_mf3;
 		
 		sendpack(msg);
 		awaitRecommend = true;

@@ -10,7 +10,7 @@ if HttpId == request {
 		
 		var d/*:Dif*/ = array_create(Dif.sizeOf);
 		d[@Dif.hp] = map.HP;
-		d[@Dif.cs] = map.CS;
+		d[@Dif.cs] = map.CS; 
 		d[@Dif.od] = map.OD;
 		d[@Dif.ar] = map.AR;
 		d[@Dif._id] = map.BeatmapID;
