@@ -3,7 +3,7 @@ if HttpId == pageRequest {
 	if HttpStatus == 0 {
 		pageRequest = -1;
 		
-		log_mf0 "o_control" log_mf1 "131" log_mf2 "list loaded" log_mf3;
+		log_mf0 "o_control" log_mf1 "123" log_mf2 "list loaded" log_mf3;
 		with o_map kill();
 		with o_scroll yy=0;
 		trace(HttpResult);
@@ -148,7 +148,7 @@ if HttpId == pageRequest {
 		
 	} else if HttpStatus < 0 {
 		scr_message("Download Error", c_red);
-		log_mf0 "o_control" log_mf1 "276" log_mf2 "list load failed" log_mf3;
+		log_mf0 "o_control" log_mf1 "268" log_mf2 "list load failed" log_mf3;
 		pageRequest = -1;
 	}
 }

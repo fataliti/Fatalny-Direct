@@ -4,10 +4,8 @@
 
 draw_set_font(fnt_arial12);
 
-FMODGMS_Sys_Create();
-FMODGMS_Sys_Initialize(32);
-fChan = FMODGMS_Chan_CreateChannel();
-fSnd = -1;
+#macro PREVIEW_CHANNEL o_control.preview_channel
+preview_channel = new Channel(); /// @is {Channel}
 
 if !file_exists("settings.ini") {
 	var f = file_text_open_write("settings.ini");
@@ -16,8 +14,8 @@ if !file_exists("settings.ini") {
 
 globalvar dataPath;
 dataPath = filename_path("settings.ini");
-log_mf0 "o_control" log_mf1 "23" log_mf2 "download directory is" log_mf3;
-log_mf0 "o_control" log_mf1 "24" log_mf2 downloadDirectory(dataPath) log_mf3;
+log_mf0 "o_control" log_mf1 "21" log_mf2 "download directory is" log_mf3;
+log_mf0 "o_control" log_mf1 "22" log_mf2 downloadDirectory(dataPath) log_mf3;
 
 globalvar exePath, autoOpen, difThumbEnable, mapThumbEnable, keyCall, keyDown;
 globalvar ppAddictEnable ,tillerinoEnable, ircName, ircPass, addictKey, FPS;
