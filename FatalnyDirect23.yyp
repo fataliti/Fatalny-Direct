@@ -52,6 +52,7 @@
     {"id":{"name":"s_game_modes","path":"sprites/s_game_modes/s_game_modes.yy",},},
     {"id":{"name":"s_search","path":"sprites/s_search/s_search.yy",},},
     {"id":{"name":"s_hear","path":"sprites/s_hear/s_hear.yy",},},
+    {"id":{"name":"execute_shell_simple_ext","path":"extensions/execute_shell_simple_ext/execute_shell_simple_ext.yy",},},
     {"id":{"name":"s_click1","path":"sounds/s_click1/s_click1.yy",},},
     {"id":{"name":"s_click2","path":"sounds/s_click2/s_click2.yy",},},
     {"id":{"name":"audio_player","path":"extensions/audio_player/audio_player.yy",},},
@@ -96,7 +97,6 @@
     {"id":{"name":"o_type","path":"objects/o_type/o_type.yy",},},
     {"id":{"name":"o_modes","path":"objects/o_modes/o_modes.yy",},},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
-    {"id":{"name":"ExecuteShell","path":"extensions/ExecuteShell/ExecuteShell.yy",},},
     {"id":{"name":"downloaderDll","path":"extensions/downloaderDll/downloaderDll.yy",},},
   ],
   "RoomOrderNodes": [

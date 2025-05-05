@@ -23,13 +23,13 @@ if RMB && mouseIn_mf0 x mouseIn_mf1 y mouseIn_mf2 x+164 mouseIn_mf3 y+35 mouseIn
 if apr && autoOpen {
 	if downloadComplete(_id) {
 		apr = false;
-		execute_shell(exePath+" "+downloadResult(_id), false);
+		execute_shell_simple(exePath, downloadResult(_id));
 	}
 }
 
 if LMB && cnd && apr {
 	if !instance_exists(o_map_preview) && !o_type.see {
-		execute_shell(exePath+" "+downloadResult(_id), false);
+		execute_shell_simple(exePath, downloadResult(_id));
 		downloadDelete(_id);
 		// execute_shell(path, false);
 		apr = false;

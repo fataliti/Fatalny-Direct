@@ -4,7 +4,7 @@ if HttpId == _id {
 	downloaded = HttpSizeDownloaded;
 	if HttpResult != undefined {
 		if autoOpen {
-			execute_shell(exePath+" "+HttpResult, false);
+			execute_shell_simple(exePath, HttpResult);
 			apr = false;	
 		} else 
 			path = exePath+" "+HttpResult;

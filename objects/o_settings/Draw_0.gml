@@ -73,7 +73,7 @@ if LMB {
 
 	if m {
 		exePath = get_open_filename("Osu!.exe|*.exe","");
-		log_mf0 "o_settings" log_mf1 "96" log_mf2 exePath log_mf3;
+		log_mf0 "o_settings" log_mf1 "93" log_mf2 exePath log_mf3;
 	}
 	
 	if point_in_circle(mx, my, lp + 155, y+18, 8)
@@ -98,8 +98,9 @@ if LMB {
 	if !point_in_circle(mx, my, lp + 155, y+158, 8) && !point_in_circle(mx, my, lp + 155, y+123, 8)
 		setKey = SetKey.null;
 	
-	if point_in_circle(mx, my, lp + 155, y+193, 8) 
-		execute_shell("C:\\Windows//explorer.exe " + dataPath, true);
+	if point_in_circle(mx, my, lp + 155, y+193, 8)  {
+		execute_shell_simple("C:\\Windows//explorer.exe", dataPath);
+	}
 	
 	if point_in_circle(mx, my, lp + 155, y+228, 8) && ircName != "" && ircPass != "" {
 		tillerinoEnable = !tillerinoEnable;

@@ -14,6 +14,7 @@
     {"name":"s_game_modes","order":21,"path":"sprites/s_game_modes/s_game_modes.yy",},
     {"name":"s_search","order":23,"path":"sprites/s_search/s_search.yy",},
     {"name":"s_hear","order":25,"path":"sprites/s_hear/s_hear.yy",},
+    {"name":"execute_shell_simple_ext","order":10,"path":"extensions/execute_shell_simple_ext/execute_shell_simple_ext.yy",},
     {"name":"s_click1","order":1,"path":"sounds/s_click1/s_click1.yy",},
     {"name":"s_click2","order":3,"path":"sounds/s_click2/s_click2.yy",},
     {"name":"audio_player","order":8,"path":"extensions/audio_player/audio_player.yy",},
@@ -58,7 +59,6 @@
     {"name":"o_type","order":13,"path":"objects/o_type/o_type.yy",},
     {"name":"o_modes","order":15,"path":"objects/o_modes/o_modes.yy",},
     {"name":"rm_main","order":1,"path":"rooms/rm_main/rm_main.yy",},
-    {"name":"ExecuteShell","order":3,"path":"extensions/ExecuteShell/ExecuteShell.yy",},
     {"name":"downloaderDll","order":7,"path":"extensions/downloaderDll/downloaderDll.yy",},
   ],
 }
