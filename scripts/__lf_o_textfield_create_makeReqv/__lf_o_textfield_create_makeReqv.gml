@@ -7,12 +7,12 @@ function __lf_o_textfield_create_makeReqv() {
 	    	exit;
 	    }
 	    
-		var g = function(parameter, obj) {
+		var parametAdd = function(parameter, obj) {
 			if obj.item == -1 
 				return "";
 			return "&"+parameter+"="+string(obj.itemsCode[@ obj.item]);
 		}
-	    
+	     
 		with (o_control) {
 			var link = ""; 
 			if o_type.type == 2 {
