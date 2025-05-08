@@ -12,33 +12,30 @@
   "androidsourcedir": "",
   "author": "",
   "classname": "",
-  "copyToTargets": -1,
-  "date": "2020-06-30T00:03:40",
+  "copyToTargets": 64,
+  "date": "2025-05-08T20:06:34.3018165+03:00",
   "description": "",
   "exportToGame": true,
   "extensionVersion": "0.0.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"GmsDownloaderDll.dll","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":64,"filename":"GmsDownloaderDll.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadFile","argCount":0,"args":[
             2,
             1,
             1,
           ],"documentation":"","externalName":"DownloadFile","help":"downloadFile(downloadId, link, filenaName) ","hidden":false,"kind":1,"returnType":2,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadStatus","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadGetProgress","argCount":0,"args":[
             2,
-          ],"documentation":"","externalName":"DownloadStatus","help":"downloadStatus(downloadId)","hidden":false,"kind":1,"returnType":2,},
+          ],"documentation":"","externalName":"DownloadGetProgress","help":"downloadStatus(downloadId)","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadDelete","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"DownloadDelete","help":"downloadDelete(downloadId)","hidden":false,"kind":1,"returnType":2,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadResult","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadGetResult","argCount":0,"args":[
             2,
-          ],"documentation":"","externalName":"DownloadResult","help":"downloadResult(downloadId)","hidden":false,"kind":1,"returnType":1,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadDirectory","argCount":0,"args":[
-            1,
-          ],"documentation":"","externalName":"DownloadDirectory","help":"downloadDirectory(path)","hidden":false,"kind":1,"returnType":1,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadComplete","argCount":0,"args":[
+          ],"documentation":"","externalName":"DownloadGetResult","help":"downloadResult(downloadId)","hidden":false,"kind":1,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadIsComplete","argCount":0,"args":[
             2,
-          ],"documentation":"","externalName":"DownloadComplete","help":"downloadComplete(downloadId)","hidden":false,"kind":1,"returnType":2,},
+          ],"documentation":"","externalName":"DownloadIsComplete","help":"downloadComplete(downloadId)","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadAddHeader","argCount":0,"args":[
             2,
             1,

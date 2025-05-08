@@ -8,3 +8,5 @@ image_alpha = 0;
 apr = true;
 
 path = "";
+
+download = noone;			/// @is {Download}

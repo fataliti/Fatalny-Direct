@@ -48,6 +48,7 @@
     {"id":{"name":"s_icon_play","path":"sprites/s_icon_play/s_icon_play.yy",},},
     {"id":{"name":"s_arrow","path":"sprites/s_arrow/s_arrow.yy",},},
     {"id":{"name":"s_arrow_load","path":"sprites/s_arrow_load/s_arrow_load.yy",},},
+    {"id":{"name":"Download","path":"scripts/Download/Download.yy",},},
     {"id":{"name":"s_modess","path":"sprites/s_modess/s_modess.yy",},},
     {"id":{"name":"s_game_modes","path":"sprites/s_game_modes/s_game_modes.yy",},},
     {"id":{"name":"s_search","path":"sprites/s_search/s_search.yy",},},
@@ -71,6 +72,7 @@
     {"id":{"name":"makeDownload","path":"scripts/makeDownload/makeDownload.yy",},},
     {"id":{"name":"makeSoundPrev","path":"scripts/makeSoundPrev/makeSoundPrev.yy",},},
     {"id":{"name":"callAddict","path":"scripts/callAddict/callAddict.yy",},},
+    {"id":{"name":"downloaderDll","path":"extensions/downloaderDll/downloaderDll.yy",},},
     {"id":{"name":"fnt_test","path":"fonts/fnt_test/fnt_test.yy",},},
     {"id":{"name":"fnt_arial12","path":"fonts/fnt_arial12/fnt_arial12.yy",},},
     {"id":{"name":"Channel","path":"scripts/Channel/Channel.yy",},},
@@ -96,7 +98,6 @@
     {"id":{"name":"o_type","path":"objects/o_type/o_type.yy",},},
     {"id":{"name":"o_modes","path":"objects/o_modes/o_modes.yy",},},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},
-    {"id":{"name":"downloaderDll","path":"extensions/downloaderDll/downloaderDll.yy",},},
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},},

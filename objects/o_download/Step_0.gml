@@ -18,8 +18,8 @@ if place_meeting(x, y+spd, o_solid) {
 y += spd;
 
 
-//trace(downloadComplete(_id));
-if downloadComplete(_id) == -1 {
+if (download.is_complete() == -1) {
 	scr_message("Download error",c_red);
+	download.destoy();
 	kill();
 }
