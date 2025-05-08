@@ -2,7 +2,7 @@
 
 **[ENGLISH VERSION OF THE TEXT](https://fataliti.itch.io/fatalny-direct)**
 
-Сторонний стендалон Osu! Direct, то есть его аналог, который подсасывается к [chimu.moe](https://chimu.moe/)
+Сторонний стендалон Osu! Direct, то есть его аналог, который подсасывается к [catboy.best](https://catboy.best/)
 
 Что умеет?
 >Тоже самое что и сам chimu.moe, полностью стендалон, то есть без необходимости включать/выключать осу паралельно/отдельно
@@ -34,7 +34,14 @@
 8. Откройте `Fatalny Direct` и в настройках включите `PPaddict`
 + При открытии превью карты стандартного режима вам будут показываться возможные варианты полученных результатов
 
-
 **[СКАЧАТЬ ОНЛАЙН БЕЗ РЕГИСТРАЦИИ](https://github.com/fataliti/Fatalny-Direct/releases)** 
 
 ![](pic.png)
+
+### Написал для этой штуки ГМС расширения
+- [AudioPlayerDll](https://github.com/fataliti/AudioPlayerDll) для проигрывания mp3
+- [GmsDownloaderDll](https://github.com/fataliti/GmsDownloaderDll) чтобы скачивать файлы с возможностью отмены загрузки
+
+### Так же использовал
+- [execute_shell_simple](https://yellowafterlife.itch.io/gamemaker-execute-shell-simple) для возможности сразу распаковывать карты и открывать папку куда они скачиваются
+- [Window Commands for GameMaker](https://yellowafterlife.itch.io/gamemaker-window-commands) для сворачивания и разворачивания окна по хоткеям
