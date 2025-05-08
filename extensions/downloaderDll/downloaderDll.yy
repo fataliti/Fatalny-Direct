@@ -13,7 +13,7 @@
   "author": "",
   "classname": "",
   "copyToTargets": 64,
-  "date": "2025-05-08T20:06:34.3018165+03:00",
+  "date": "2025-05-08T23:58:48.9200892+03:00",
   "description": "",
   "exportToGame": true,
   "extensionVersion": "0.0.1",
@@ -33,9 +33,9 @@
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadGetResult","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"DownloadGetResult","help":"downloadResult(downloadId)","hidden":false,"kind":1,"returnType":1,},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadIsComplete","argCount":0,"args":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadGetStatus","argCount":0,"args":[
             2,
-          ],"documentation":"","externalName":"DownloadIsComplete","help":"downloadComplete(downloadId)","hidden":false,"kind":1,"returnType":2,},
+          ],"documentation":"","externalName":"DownloadGetStatus","help":"downloadComplete(downloadId)","hidden":false,"kind":1,"returnType":2,},
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"downloadAddHeader","argCount":0,"args":[
             2,
             1,

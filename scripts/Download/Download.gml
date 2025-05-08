@@ -17,8 +17,16 @@ function Download() constructor {
         return downloadGetProgress(__id);
     }
     
+    static get_status = function() {
+        return downloadGetStatus(__id);
+    }
+
     static is_complete = function() {
-        return downloadIsComplete(__id);
+        return get_status() == 1;
+    }
+    
+    static is_failed = function() {
+        return get_status() == -2;
     }
     
     static get_result = function() {
