@@ -18,6 +18,7 @@ log_mf0 "o_control" log_mf1 "21" log_mf2 "download directory is " + dataPath log
 
 globalvar exePath, autoOpen, difThumbEnable, mapThumbEnable, keyCall, keyDown;
 globalvar ppAddictEnable ,tillerinoEnable, ircName, ircPass, addictKey, FPS;
+globalvar soundGain;
 
 ini_open("settings.ini");
 exePath = ini_read_string("sets", "exePath", "");
@@ -33,6 +34,7 @@ display_reset(AAlevel, false);
 
 ppAddictEnable = bool(ini_read_real("sets", "ppAddictEnable", 0));
 tillerinoEnable = bool(ini_read_real("sets", "tillerinoEnable", 0));
+soundGain = ini_read_real("sets", "soundGain", 50);
 
 FPS = ini_read_real("sets", "FPS", 60);
 ini_close();
@@ -49,3 +51,4 @@ ircPass = ini_read_string("keys", "ircPass", "");
 ini_close();
 pageRequest = -1;
 
+PREVIEW_CHANNEL.setVolume(soundGain);

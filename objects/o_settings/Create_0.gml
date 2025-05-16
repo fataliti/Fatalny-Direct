@@ -8,3 +8,4 @@ enum SetKey {
 	down,
 }
 setKey = SetKey.null;
+is_gain_slider_active = false;

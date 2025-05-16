@@ -3,7 +3,7 @@ if !instance_exists(o_map)
 
 color(c_black);
 alpha(0.5);
-draw_rectangle(x, y, x+8,  600, false);
+draw_rectangle(x, y, x+8,  640, false);
 alpha(1);
 var ymin = infinity,ymax = -infinity;
 with(o_map) {

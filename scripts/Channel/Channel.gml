@@ -31,7 +31,7 @@ function Channel() constructor {
 		return ChannelVolume(__id, volume);
 	}
 	
-	static getVolume = function(volume) {
+	static getVolume = function() {
 		return __volume;
 	}
 	

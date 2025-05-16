@@ -8,6 +8,7 @@ ini_write_real("sets", "keyDown", keyDown);
 
 ini_write_real("sets", "ppAddictEnable", real(ppAddictEnable));
 ini_write_real("sets", "tillerinoEnable", real(tillerinoEnable));
+ini_write_real("sets", "soundGain", real(soundGain));
 
 ini_write_real("sets", "FPS", FPS);
 

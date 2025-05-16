@@ -1,4 +1,8 @@
 {
+    "GMEdit-Constructor": {
+        "runtimeReleaseChannel": "Stable",
+        "runtimeVersion": "runtime-2023.4.0.113"
+    },
     "lambdaMode": 2,
     "linterPrefs": {
         

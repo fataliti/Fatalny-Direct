@@ -18,18 +18,31 @@ draw_sprite_ext(s_osu_ico,0,xx-55, y-47,1,1,0, exePath != "" || m? c_fuchsia:c_w
 var p = exePath!=""? " ":" not ";
 draw_text(lp, y-25, "Path" + p +"specified");
 
-{/*!#lamdef __lf_o_settings_draw_option*/};
 
-__lf_o_settings_draw_option("Auto Unpack", lp, y+10);
-__lf_o_settings_draw_option("Tumbnails", lp, y+45);
-//option("Preview", lp, y+80);
-__lf_o_settings_draw_option("AA level x"+string(AAlevel), lp, y+80);
-__lf_o_settings_draw_option("Maximize on: "+string(keyName(keyCall)), lp, y+115);
-__lf_o_settings_draw_option("Minimize on: "+string(keyName(keyDown)), lp, y+150);
-__lf_o_settings_draw_option("Storage", lp, y+185);
-__lf_o_settings_draw_option("Tillerino", lp, y+220);
-__lf_o_settings_draw_option("PPaddict", lp, y+255);
-__lf_o_settings_draw_option("FPS: "+string(FPS), lp, y+290);
+var draw_settings_option = function(str, xPos, yPos) {
+	draw_text(xPos, yPos, str);
+	draw_circle(xPos + 155, yPos + 8, 8, false);
+}
+
+draw_settings_option("Auto Unpack", lp, y+10);
+draw_settings_option("Tumbnails", lp, y+45);
+draw_settings_option("AA level x"+string(AAlevel), lp, y+80);
+draw_settings_option("Maximize on: "+string(keyName(keyCall)), lp, y+115);
+draw_settings_option("Minimize on: "+string(keyName(keyDown)), lp, y+150);
+draw_settings_option("Storage", lp, y+185);
+draw_settings_option("Tillerino", lp, y+220);
+draw_settings_option("PPaddict", lp, y+255);
+draw_settings_option("FPS: "+string(FPS), lp, y+290);
+
+draw_text(lp + 70, y + 310, "Gain");
+
+color(c_white);
+alpha(0.5);
+draw_line_width(lp, y + 335, lp + 170,  y + 335, 3);
+alpha(1);
+color(#FF9900);
+draw_circle(lp + 170 * (soundGain / 100), y + 335, 6, false);
+
 
 color(c_black);
 draw_circle(lp + 155, y+18, 6, false);
@@ -73,7 +86,7 @@ if LMB {
 
 	if m {
 		exePath = get_open_filename("Osu!.exe|*.exe","");
-		log_mf0 "o_settings" log_mf1 "93" log_mf2 exePath log_mf3;
+		log_mf0 "o_settings" log_mf1 "107" log_mf2 exePath log_mf3;
 	}
 	
 	if point_in_circle(mx, my, lp + 155, y+18, 8)
@@ -129,6 +142,10 @@ if LMB {
 	
 	if point_in_circle(mx, my, lp + 155, y+263, 8) && addictKey != ""
 		ppAddictEnable = !ppAddictEnable;
+		
+	if (point_in_circle(mx, my, lp + 170 * PREVIEW_CHANNEL.getVolume() / 100, y + 335, 8)) {
+		is_gain_slider_active = true;
+	}
 }
 
 switch(setKey) {
@@ -144,4 +161,15 @@ switch(setKey) {
 			setKey = SetKey.null;
 		}
 		break;
+}
+
+
+if (is_gain_slider_active) {
+	var new_gain = (mx - lp) / 170;
+	new_gain = clamp(new_gain, 0, 1);
+	soundGain = new_gain * 100;
+	PREVIEW_CHANNEL.setVolume(soundGain);
+	if (mouse_check_button_released(mb_left)) {
+		is_gain_slider_active = false;
+	}
 }
